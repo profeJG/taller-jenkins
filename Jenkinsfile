@@ -28,6 +28,8 @@ pipeline{
 		stage('Test unitarios'){
                         steps{
                                 echo "Pruebas unitarias"
+				sh 'make tests-xml'	
+				junit 'reports/cmocka/*.xml'
                         }
                 }
 	}
