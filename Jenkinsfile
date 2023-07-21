@@ -14,6 +14,14 @@ pipeline{
 				sh "doxygen; zip documentacion.zip -r html/*"
 			}
 		}
+
+		stage('Análisis estático'){
+                        steps{
+                                echo "Análisis estático con cppcheck"
+                                sh "make cppcheck-xml"
+				// Analizamos el resultado
+                        }
+                }
 	}
 	post{
 		success{
