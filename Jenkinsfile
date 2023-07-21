@@ -22,6 +22,7 @@ pipeline{
 				echo "Creada carpeta reports/cppcheck"
 				sh "make cppcheck-xml"
 				// Analizamos el resultado
+				recordIssues(tools: [cppCheck(pattern: 'reports/cppcheck/*.xml')])
                         }
                 }
 	}
