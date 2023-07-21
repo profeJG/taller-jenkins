@@ -25,6 +25,11 @@ pipeline{
 				recordIssues(tools: [cppCheck(pattern: 'reports/cppcheck/*.xml')])
                         }
                 }
+		stage('Test unitarios'){
+                        steps{
+                                echo "Pruebas unitarias"
+                        }
+                }
 	}
 	post{
 		success{
