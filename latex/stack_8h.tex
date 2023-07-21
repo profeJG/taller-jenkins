@@ -1,0 +1,72 @@
+\hypertarget{stack_8h}{}\doxysection{stack.\+h File Reference}
+\label{stack_8h}\index{stack.h@{stack.h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{stack_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{stack_8h_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}~20
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{stack_8h_aeb9ed8a11721ea8edcfd8223b00d3b1f}{push}} (int)
+\item 
+int \mbox{\hyperlink{stack_8h_a163177f1a0b7d847bc3241809dafc097}{pop}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{stack_8h_af93f4f37fc2ad9c37af4a715423b110c}{top}}
+\item 
+int \mbox{\hyperlink{stack_8h_a3f32aa6adb4f69ee66aaca972122a4a8}{stack}} \mbox{[}\mbox{\hyperlink{stack_8h_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Módulo para gestionar un stack 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{stack_8h_a2e1da8593b0244d8e9e3b84ef7b35e73}\label{stack_8h_a2e1da8593b0244d8e9e3b84ef7b35e73}} 
+\index{stack.h@{stack.h}!max@{max}}
+\index{max@{max}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{max}{max}}
+{\footnotesize\ttfamily \#define max~20}
+
+Número máximo de elementos que pueden almacenarse en el stack auxiliar. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{stack_8h_a163177f1a0b7d847bc3241809dafc097}\label{stack_8h_a163177f1a0b7d847bc3241809dafc097}} 
+\index{stack.h@{stack.h}!pop@{pop}}
+\index{pop@{pop}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily int pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Saca un elemento del stack \mbox{\Hypertarget{stack_8h_aeb9ed8a11721ea8edcfd8223b00d3b1f}\label{stack_8h_aeb9ed8a11721ea8edcfd8223b00d3b1f}} 
+\index{stack.h@{stack.h}!push@{push}}
+\index{push@{push}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily void push (\begin{DoxyParamCaption}\item[{int}]{m }\end{DoxyParamCaption})}
+
+Introduce un elemento en el stack 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{stack_8h_a3f32aa6adb4f69ee66aaca972122a4a8}\label{stack_8h_a3f32aa6adb4f69ee66aaca972122a4a8}} 
+\index{stack.h@{stack.h}!stack@{stack}}
+\index{stack@{stack}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{stack}{stack}}
+{\footnotesize\ttfamily int stack\mbox{[}\mbox{\hyperlink{stack_8h_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+Array que se utiliza para hacer el cálculo que permite saber si un número es un número de Armstrong. \mbox{\Hypertarget{stack_8h_af93f4f37fc2ad9c37af4a715423b110c}\label{stack_8h_af93f4f37fc2ad9c37af4a715423b110c}} 
+\index{stack.h@{stack.h}!top@{top}}
+\index{top@{top}!stack.h@{stack.h}}
+\doxysubsubsection{\texorpdfstring{top}{top}}
+{\footnotesize\ttfamily int top\hspace{0.3cm}{\ttfamily [extern]}}
+
+Variable que contiene el índice del último elemento introducido en el stack 
