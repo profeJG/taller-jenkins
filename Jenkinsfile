@@ -4,18 +4,22 @@ pipeline{
 		stage('Obtener el repositorio'){
 			steps{
 				echo "git clone"
+				git branch: 'main', url: 'https://github.com/profeJG/taller-jenkins.git'				
 			}
 		}
 		stage('Generar documentación'){
 			steps{
 				echo "doxygen"
 				echo "ZIP"
+				sh "doxygen; zip documentacion.zip -r html/*"
 			}
 		}
 	}
 	post{
 		success{
 			echo "Publicar HTML"
+			publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'html', reportFiles: 'files.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+			archive 'documentacion.zip'			
 		}
 	}
 }
