@@ -18,7 +18,7 @@ pipeline{
 		stage('Análisis estático'){
                         steps{
                                 echo "Análisis estático con cppcheck"
-                                sh "if [ ! -d reports/cppcheck ] ; then mkdir -p /reports/cppcheck ; fi"
+                                sh "if [ ! -d reports/cppcheck ] ; then mkdir -p reports/cppcheck ; fi"
 				echo "Creada carpeta reports/cppcheck"
 				sh "make cppcheck-xml"
 				// Analizamos el resultado
