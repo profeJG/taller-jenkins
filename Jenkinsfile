@@ -19,7 +19,7 @@ pipeline{
 		success{
 			echo "Publicar HTML"
 			publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'html', reportFiles: 'files.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
-			# archive 'documentacion.zip'
+			// archive 'documentacion.zip'
 			echo "Adjuntando ficheros .zip"
 			archiveArtifacts artifacts: '**/*.zip'						
 		}
